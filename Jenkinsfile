@@ -11,5 +11,15 @@ pipeline {
         echo 'stage'
       }
     }
+    stage('stage3') {
+      steps {
+        build 'test-error-exit'
+      }
+    }
+    stage('stage4') {
+      steps {
+        build 'test-error-exit'
+      }
+    }
   }
 }
